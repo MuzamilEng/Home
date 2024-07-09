@@ -3,6 +3,30 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Franchise = () => {
+  const servicesExamples = [
+    {
+      title: "Kitchens & Bathrooms",
+      description: "Our team has successfully renovated numerous kitchens and bathrooms, delivering stylish and functional spaces that meet our clients' unique needs and preferences."
+    },
+    {
+      title: "Driveways & Patios",
+      description: "We have transformed outdoor areas with our expert paving services, creating beautiful and durable driveways and patios that enhance curb appeal and usability."
+    },
+    {
+      title: "Property Maintenance",
+      description: "From routine maintenance tasks to major property upgrades, we have helped homeowners and businesses maintain their properties in top condition."
+    },
+    {
+      title: "Flooring Solutions",
+      description: "Our extensive experience in flooring ensures that we can provide and install the perfect flooring solution for any room, adding both beauty and value to your property."
+    },
+    {
+      title: "Painting & Decorating",
+      description: "Our skilled painters and decorators have brought new life to countless homes and offices, creating inviting and vibrant environments."
+    }
+  ];
+  
+  
   return (
     <>
       {/* Google Tag Manager (noscript) */}
@@ -39,12 +63,22 @@ const Franchise = () => {
                   >
                     <div className="section__content ">
                       <h1 className="lg:text-[2vw] lg:font-bold">
-                        HomeSteady is Adding Locations
+                      Our Portfolio
                       </h1>
                       <h2 className="lg:text-[1.5vw]">
-                        Take Advantage of All of Our HomeSteady Franchise
-                        Benefits
+                      At ABC Home Services, we take pride in the quality of our work and the satisfaction of our clients. Here are some of the projects we have completed across Yorkshire:
                       </h2>
+                      <div style={{ marginTop: "2vw" }} className="section__content">
+                      {servicesExamples.map((service, index) => (
+                        <div key={index}>
+                          <h2 className="text-align-left mt-[1vw] lg:text-[1.5vw] font-bold">{service.title}</h2>
+                          <p className="text-align-left lg:text-[1vw] lg:font-medium ">{service.description}</p>
+                        </div>
+                      ))}
+                      <p className="text-align-left lg:text-[1vw] lg:font-medium ">
+                        For more examples of our work and to see how we can help with your next project, get in touch with us at <a href="mailto:abcmaintenance@gmail.com">abcmaintenance@gmail.com</a>. Whether you need a minor repair or a major renovation, we are here to provide the expert service you deserve.
+                      </p>
+                    </div>
                       <p className="lg:text-[1.2vw] lg:leading-[2vw]">
                         HomeSteady is the only franchise of its kind in the
                         growing home improvement and repair industry. If you

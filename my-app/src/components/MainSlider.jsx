@@ -1,6 +1,52 @@
 import React from "react";
 import Form from "../components/Form";
 const MainSlider = () => {
+  const services = [
+    {
+      title: "Full Kitchen and Bathroom Fitting:",
+      description: "Transform your kitchen or bathroom with our expert installation and fitting services."
+    },
+    {
+      title: "Driveways and Patio Paving:",
+      description: "Enhance your outdoor space with durable and aesthetically pleasing paving solutions."
+    },
+    {
+      title: "House & Office Cleaning:",
+      description: "Keep your home or office spotless with our reliable cleaning services."
+    },
+    {
+      title: "All Around Property Maintenance:",
+      description: "From minor repairs to major overhauls, we handle all aspects of property maintenance."
+    },
+    {
+      title: "Carpets & Vinyl:",
+      description: "Choose from a wide range of carpets and vinyl flooring options, professionally installed to perfection."
+    },
+    {
+      title: "Extensions & Loft Conversions:",
+      description: "Maximize your living space with our custom extension and loft conversion services."
+    },
+    {
+      title: "Garden Maintenance:",
+      description: "Maintain a beautiful garden all year round with our expert gardening services."
+    },
+    {
+      title: "Removal & House Clearance:",
+      description: "Efficient and hassle-free removal and clearance services for your property."
+    },
+    {
+      title: "All Types of Flooring:",
+      description: "Whether you need hardwood, laminate, or tile flooring, we've got you covered."
+    },
+    {
+      title: "Painting and Decorating:",
+      description: "Refresh your space with our professional painting and decorating services."
+    },
+    {
+      title: "Energy Performance, Electrical Safety & Gas Safety Certificates:",
+      description: "Ensure your property meets all safety regulations with our certification services."
+    }
+  ];
   return (
     <>
       <div id="content" className="main-content" role="main">
@@ -45,7 +91,7 @@ const MainSlider = () => {
             <p className="text-[3vw]">
               Complete our contact form today to schedule services.
             </p>
-            <a href="contact/index.html" className="btn btn-secondary mr-0">
+            <a href="/contact" className="btn btn-secondary mr-0">
               Contact Us
             </a>
           </div>
@@ -62,20 +108,14 @@ const MainSlider = () => {
                   >
                     <div className="section__content ">
                       <h1 className="text-align-left lg:text-[1.5vw] lg:font-bold">
-                        HOME REPAIR SERVICES WITH HOMESTEADY
+                      Home and Office Maintenance Solutions Across Yorkshire
                       </h1>
-                      <h2 className="text-align-left lg:text-[1vw] font-medium mt-[1vw]">
-                        Trusted Handyman Services for Home Repairs and
-                        Dependable Maintenance.
-                      </h2>
-                      <p className="text-align-left lg:text-[1vw] lg;font-medium leading-[2vw] lg:mt-[1vw]">
-                        HomeSteady’s mission is to provide proactive,
-                        trustworthy, and affordable home repair and maintenance
-                        solutions. Our local technicians ready to assist you
-                        with your household projects or repair needs.
+                      <p className="text-align-left lg:text-[1vw] lg:font-medium lg:mt-[1vw]">
+                      Welcome to ABC Home Services, your go-to provider for comprehensive home and office maintenance solutions across Yorkshire. We specialize in delivering top-notch services tailored to meet your needs, no matter how big or small your project is. Our team of experienced professionals is dedicated to ensuring your complete satisfaction, providing high-quality workmanship at competitive prices.
                       </p>
                     </div>
                   </div>
+                   
                 </div>
                 <div className="col-md-6">
                   <div className="section__img">
@@ -98,6 +138,19 @@ const MainSlider = () => {
             </div>
           </section>
           <section className="content_1 section__wrapper ">
+            <div className="flex items-center justify-center w-full">
+            <div style={{ marginTop: "2vw" }} className="section__content">
+            <h1 className="text-align-left text-center lg:text-[1.5vw] lg:font-bold">Our Services Include:</h1>
+            {services.map((service, index) => (
+              <div key={index} className="">
+                <h2 className="text-center lg:text-[1vw] mt-[1vw] font-bold">{service.title}</h2>
+                <p className="text-center lg:text-[1vw] lg:font-medium">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          </div>
+          </section>
+          <section className="content_1 section__wrapper mt-[8vw]">
             <div className="container">
               <div className="row ">
                 <div className="col-md-12">
@@ -110,7 +163,7 @@ const MainSlider = () => {
                       <h2 className="text-align-left lg:text-[1.5vw] lg:font-bold">
                         OUR SERVICE GUARANTEE
                       </h2>
-                      <p className="text-align-left lg:text-[1vw] font-medium leading-[2vw] lg:mt-[1vw]">
+                      <p className="text-align-left lg:text-[1vw] font-medium lg:mt-[1vw]">
                         HomeSteady stands behind our technicians and the
                         services they perform by providing a one-year warranty
                         on all our home services. If our home maintenance
@@ -222,47 +275,47 @@ const MainSlider = () => {
                       </h3>
                       <ul className="defaultList ">
                         <li>
-                          <a href="painting-services/index.html" type="page">
+                          <a href="#" type="page">
                             Painting
                           </a>
                         </li>
                         <li>
-                          <a href="bathroom-repairs/index.html" type="page">
+                          <a href="#" type="page">
                             Bathroom Repairs
                           </a>
                         </li>
                         <li>
-                          <a href="deck-repairs/index.html" type="page">
+                          <a href="#" type="page">
                             Deck Services
                           </a>
                         </li>
                         <li>
-                          <a href="door-services/index.html" type="page">
+                          <a href="#" type="page">
                             Door Services
                           </a>
                         </li>
                         <li>
-                          <a href="drywall-repair/index.html" type="page">
+                          <a href="#" type="page">
                             Drywall Repairs
                           </a>
                         </li>
                         <li>
-                          <a href="fence-repair/index.html" type="page">
+                          <a href="#" type="page">
                             Fence Repairs
                           </a>
                         </li>
                         <li>
-                          <a href="flooring-repair/index.html" type="page">
+                          <a href="#" type="page">
                             Flooring Repairs
                           </a>
                         </li>
                         <li>
-                          <a href="tv-mounting/index.html" type="page">
+                          <a href="#" type="page">
                             TV Mounting
                           </a>
                         </li>
                         <li>
-                          <a href="tile-repair/index.html" type="page">
+                          <a href="#" type="page">
                             Tile Repairs
                           </a>
                         </li>
@@ -272,8 +325,8 @@ const MainSlider = () => {
                       </h3>
                       <div className="section__button text-left lg:mt-[1vw]">
                         <a
-                          className="btn btn-primary"
-                          href="https://irp.cdn-website.com/9922685c/files/uploaded/Service_Sheet_8.5x14_HomeSteady_Generic.pdf"
+                          className="btn btn-primary" // commented link to a pdf file
+                          href="#" //https://irp.cdn-website.com/9922685c/files/uploaded/Service_Sheet_8.5x14_HomeSteady_Generic.pdf
                           target="_blank"
                         >
                           HOME REPAIR SERVICES
@@ -383,7 +436,7 @@ const MainSlider = () => {
                       <div className="section__button text-left lg:mt-[1vw]">
                         <a
                           className="btn btn-primary"
-                          href="home-maintenance-plans/index.html"
+                          href="/about"
                           target="_self"
                         >
                           STEADY HOME PLAN
@@ -393,16 +446,14 @@ const MainSlider = () => {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div className="section__img">
+                  <div className="">
                     <div className="section_img_wrapper">
                       <img
-                        width={800}
-                        height={533}
-                        src="wp-content/uploads/2022/08/bathroom.jpg"
-                        className="attachment-full size-full"
+                        src="/img/mainti4.jpg" className="w-full object-cover max-h-[75vw] lg:max-h-[35vw]"
+
                         alt="Bathroom"
                         decoding="async"
-                        srcSet="https://www.homesteadyservices.com/wp-content/uploads/2022/08/bathroom.jpg 800w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/bathroom-300x200.jpg 300w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/bathroom-768x512.jpg 768w"
+                        // srcSet="https://www.homesteadyservices.com/wp-content/uploads/2022/08/bathroom.jpg 800w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/bathroom-300x200.jpg 300w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/bathroom-768x512.jpg 768w"
                         sizes="(max-width: 800px) 100vw, 800px"
                       />
                     </div>

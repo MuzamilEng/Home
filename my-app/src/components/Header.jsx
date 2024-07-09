@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
+  const [showSidebar, setShowSidebar] = useState(false)
 
   return (
     <>
@@ -56,8 +57,8 @@ const Header = () => {
                             : ""
                         }
                       >
-                        <Link to="/home-maintainence">
-                          <p className="text-[1vw]">Steady Home Plan</p>
+                        <Link to="/about">
+                          <p className="text-[1vw]">About Us</p>
                         </Link>
                       </li>
                       <li
@@ -84,7 +85,7 @@ const Header = () => {
                             id="menu-item-1003320"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003320"
                           >
-                            <a href="bathroom-repairs/index.html">
+                            <a href="#">
                               BATHROOM REPAIR
                             </a>
                           </li>
@@ -92,19 +93,19 @@ const Header = () => {
                             id="menu-item-1003321"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003321"
                           >
-                            <a href="deck-repairs/index.html">DECK SERVICES</a>
+                            <a href="#">DECK SERVICES</a>
                           </li>
                           <li
                             id="menu-item-1003322"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003322"
                           >
-                            <a href="door-services/index.html">DOOR SERVICES</a>
+                            <a href="#">DOOR SERVICES</a>
                           </li>
                           <li
                             id="menu-item-1003323"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003323"
                           >
-                            <a href="drywall-repair/index.html">
+                            <a href="#">
                               DRYWALL REPAIR
                             </a>
                           </li>
@@ -126,7 +127,7 @@ const Header = () => {
                             id="menu-item-1003326"
                             className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003326"
                           >
-                            <a href="tv-mounting/index.html">TV MOUNTING</a>
+                            <a href="#">TV MOUNTING</a>
                           </li>
                           <li
                             id="menu-item-1003327"
@@ -139,26 +140,14 @@ const Header = () => {
                       <li
                         id="menu-item-1003313"
                         className={
-                          location.pathname === "/franchise"
+                          location.pathname === "/portfolio"
                             ? "current-menu-item"
                             : ""
                         }
                       >
-                        <Link to="/franchise">
-                          <p className="text-[1vw]">Franchise</p>
+                        <Link to="/portfolio">
+                          <p className="text-[1vw]">Portfolio</p>
                         </Link>
-                      </li>
-                      <li
-                        id="menu-item-1003317"
-                        className="menu-item menu-item-type-custom menu-item-object-custom menu-item-1003317"
-                      >
-                        <a
-                          target="_blank"
-                          rel="noopener"
-                          href="https://homesteady-careers.careerplug.com/jobs"
-                        >
-                          <p className="text-[1vw]">Careers</p>
-                        </a>
                       </li>
                     </ul>
                   </div>{" "}
@@ -170,90 +159,41 @@ const Header = () => {
                 </Link>
               </div>
               <div className="mobile-menu">
-                <div className="menubars">
+                <div onClick={() => setShowSidebar(!showSidebar)} className="menubars sticky top-[10vw] right-[7vw]">
                   <div className="menubar top" />
                   <div className="menubar middle" />
                   <div className="menubar bottom" />
                 </div>
                 <div className="menubackground"></div>
-                <div className="mobile-nav-menu">
+                {showSidebar && <div className="mobile-nav-menu">
                   <div className="menu-main-menu-container">
                     <ul className="menulinks">
                       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1003283 current_page_item menu-item-1003311">
-                        <a href="index.html" aria-current="page">
+                        <a href="/" aria-current="page" onClick={() => setShowSidebar(false)}>
                           Welcome
                         </a>
                       </li>
                       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003312">
-                        <a href="home-maintenance-plans/index.html">
-                          Steady Home Plan
+                        <a href="/about" onClick={() => setShowSidebar(false)}>
+                          About Us
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1003318">
-                        <a href="painting-services/index.html#HomeRepairServices">
-                          Home Repair Services
-                        </a>
-                        <ul className="sub-menu">
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003319">
-                            <a href="painting-services/index.html">
-                              PAINTING SERVICES
-                            </a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003320">
-                            <a href="bathroom-repairs/index.html">
-                              BATHROOM REPAIR
-                            </a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003321">
-                            <a href="deck-repairs/index.html">DECK SERVICES</a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003322">
-                            <a href="door-services/index.html">DOOR SERVICES</a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003323">
-                            <a href="drywall-repair/index.html">
-                              DRYWALL REPAIR
-                            </a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003324">
-                            <a href="fence-repair/index.html">FENCE REPAIR</a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003325">
-                            <a href="flooring-repair/index.html">
-                              FLOORING REPAIR
-                            </a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003326">
-                            <a href="tv-mounting/index.html">TV MOUNTING</a>
-                          </li>
-                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003327">
-                            <a href="tile-repair/index.html">TILE REPAIR</a>
-                          </li>
-                        </ul>
-                      </li>
+                      
                       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003313">
-                        <a href="franchise/index.html">Franchise</a>
+                        <a href="/portfolio">Portfolio</a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-1003317">
-                        <a
-                          target="_blank"
-                          rel="noopener"
-                          href="https://homesteady-careers.careerplug.com/jobs"
-                        >
-                          Careers
-                        </a>
-                      </li>
+                      
                     </ul>
                   </div>{" "}
                   <div className="mobile-location-search">
                     <a
-                      href="contact/index.html"
+                      href="/contact"
                       className="btn btn-primary mr-0"
                     >
                       Contact
                     </a>
                   </div>
-                </div>
+                </div>}
               </div>
             </div>
             {/* .site-header-menu */}

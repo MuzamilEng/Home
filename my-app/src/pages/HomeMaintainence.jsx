@@ -68,12 +68,12 @@ const HomeMaintainence = () => {
                         <img
                           width={533}
                           height={800}
-                          src="../wp-content/uploads/2022/08/home-drill.jpg"
+                          src="/img/mainti1.jpg"
                           className="attachment-full size-full"
                           alt="Man Repairing Cabinet ─ Ann Arbor, MI ─ HomeSteady"
                           decoding="async"
                           fetchpriority="high"
-                          srcSet="https://www.homesteadyservices.com/wp-content/uploads/2022/08/home-drill.jpg 533w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/home-drill-200x300.jpg 200w"
+                          // srcSet="https://www.homesteadyservices.com/wp-content/uploads/2022/08/home-drill.jpg 533w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/home-drill-200x300.jpg 200w"
                           sizes="(max-width: 533px) 100vw, 533px"
                         />
                       </div>
@@ -114,16 +114,16 @@ const HomeMaintainence = () => {
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="section__img">
+                    <div className="">
                       <div className="section_img_wrapper">
                         <img
-                          width={800}
-                          height={533}
-                          src="../wp-content/uploads/2022/08/sink.jpg"
-                          className="attachment-full size-full"
+                          // width={800}
+                          // height={533}
+                          src="/img/mainti2.jpg"
+                          className="attachment-full w-[80w] size-full max-h-[70vw] lg:max-h-[30vw]"
                           alt="Handyman Repairing Sink"
                           decoding="async"
-                          srcSet="https://www.homesteadyservices.com/wp-content/uploads/2022/08/sink.jpg 800w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/sink-300x200.jpg 300w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/sink-768x512.jpg 768w"
+                          // srcSet="https://www.homesteadyservices.com/wp-content/uploads/2022/08/sink.jpg 800w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/sink-300x200.jpg 300w, https://www.homesteadyservices.com/wp-content/uploads/2022/08/sink-768x512.jpg 768w"
                           sizes="(max-width: 800px) 100vw, 800px"
                         />
                       </div>
